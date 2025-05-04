@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: corbat-kubernetes-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: corbat-kubernetes-app
+  template:
+    metadata:
+      labels:
+        app: corbat-kubernetes-app
+    spec:
+      containers:
+        - name: corbat-kubernetes-app
+          image: corbat-kubernetes-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

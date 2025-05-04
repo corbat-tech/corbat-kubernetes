@@ -1,0 +1,1 @@
+docker build -t corbat-kubernetes-app:latest ../app
