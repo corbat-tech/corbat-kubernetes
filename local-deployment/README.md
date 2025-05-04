@@ -81,13 +81,13 @@ kind: Service
 metadata:
   name: corbat-kubernetes-app-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    app: demo-app
+    app: corbat-kubernetes-app
   ports:
     - port: 8080
       targetPort: 8080
-      nodePort: 30007
+
 ```
 
 ## Apply the Manifests
